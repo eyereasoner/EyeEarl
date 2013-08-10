@@ -1,0 +1,16 @@
+{
+  "name": "EyeEarlReportGenerator",
+  "version": "0.1.0",
+  "description": "EARL report generator for EYE.",
+  "main": "eye-earl-report.js",
+  "author": "Ruben Verborgh <ruben.verborgh@gmail.com>",
+  "scripts": {
+    "test": "node eye-earl-report.js"
+  },
+  "dependencies": {
+    "n3": "0.1.x",
+    "request": "2.x",
+    "colors": "0.6.x",
+    "async": "0.1.x"
+  }
+}
