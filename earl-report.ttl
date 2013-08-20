@@ -14,7 +14,7 @@
   foaf:maker <http://www.agfa.com/w3c/jdroo/card.rdf#me>.
 
 <http://eulersharp.sourceforge.net/#eye> a earl:Software, earl:TestSubject, doap:Project;
-  doap:name "node-n3";
+  doap:name "EYE";
   doap:homepage <http://eulersharp.sourceforge.net/>;
   doap:license <http://opensource.org/licenses/MIT>;
   doap:programming-language "Prolog";
