@@ -336,7 +336,7 @@ function generateEarlReport(tests, callback) {
     writeln();
 
     writeln('<', application, '> a earl:Software, earl:TestSubject, doap:Project;');
-    writeln('  doap:name "node-n3";');
+    writeln('  doap:name "EYE";');
     writeln('  doap:homepage <', homepage, '>;');
     writeln('  doap:license <http://opensource.org/licenses/MIT>;');
     writeln('  doap:programming-language "Prolog";');
