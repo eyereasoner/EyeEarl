@@ -1,9 +1,0 @@
-@prefix log: <http://www.w3.org/2000/10/swap/log#>.
-@prefix e: <http://eulersharp.sourceforge.net/2003/03swap/log-rules#>.
-
-{	(?Expected ?Actual) a <try#Args>.
-	?Expected!log:semantics log:includes ?Actual!log:semantics.
-	?Actual!log:semantics log:includes ?Expected!log:semantics.
-} =>
-{	(?Expected ?Actual) :result "matched"
-}.
