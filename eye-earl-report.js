@@ -227,8 +227,8 @@ function compareGraphs(actual, expected, callback) {
       callback(null, true);
     // If not, we check for proper graph equality with SWObjects
     else
-      exec('sparql -d ' + expected + ' --compare ' + actual, function (error, stdout, stderr) {
-        callback(error, /^matched\s*$/.test(stdout), stdout);
+      exec('rdfcompare ' + expected + ' ' + actual + ' N-TRIPLE N3', function (error, stdout, stderr) {
+        callback(error, /\sequal\s*$/.test(stdout), stdout);
       });
   });
 }
