@@ -158,7 +158,7 @@ function fetch(testFile, callback) {
 function performTest(test, actionTurtle, callback) {
   var documentURI = testPath + test.action,
       resultFile = outputFolder + test.action.replace(/\.ttl$/, '.nt'),
-      eye = spawn('eye', ['--swipl', '--nope', '--pass', '--turtle', documentURI,
+      eye = spawn('eye', ['--nope', '--pass', '--turtle', documentURI,
                           '--wcache', documentURI, testFolder + test.action]),
       output = "",
       error = "";
@@ -172,7 +172,7 @@ function performTest(test, actionTurtle, callback) {
     var errorMatch;
     if (!(eye.stdout.finished && eye.stderr.finished))
       return;
-    if (errorMatch = error.match(/^\*\* ERROR \*\*\s*(.*)$/m))
+    if (errorMatch = error.match(/^parse error\s*(.*)$/m))
       test.error = errorMatch[1];
 
     verifyResult(test, resultFile, test.result && (testFolder + test.result), callback);
