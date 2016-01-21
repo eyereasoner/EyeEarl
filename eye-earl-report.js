@@ -158,7 +158,7 @@ function fetch(testFile, callback) {
 function performTest(test, actionTurtle, callback) {
   var documentURI = testPath + test.action,
       resultFile = outputFolder + test.action.replace(/\.ttl$/, '.nt'),
-      eye = spawn('eye', ['--nope', '--pass', '--turtle', documentURI,
+      eye = spawn('eye', ['--nope', '--pass-turtle', '--turtle', documentURI,
                           '--wcache', documentURI, testFolder + test.action]),
       output = "",
       error = "";
