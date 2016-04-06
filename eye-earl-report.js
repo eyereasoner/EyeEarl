@@ -172,7 +172,7 @@ function performTest(test, actionTurtle, callback) {
     var errorMatch;
     if (!(eye.stdout.finished && eye.stderr.finished))
       return;
-    if (errorMatch = error.match(/^parse error\s*(.*)$/m))
+    if (errorMatch = error.match(/^\*\* ERROR \*\*\s*(.*)$/m))
       test.error = errorMatch[1];
 
     verifyResult(test, resultFile, test.result && (testFolder + test.result), callback);
