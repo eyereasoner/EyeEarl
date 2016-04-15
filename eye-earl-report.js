@@ -12,7 +12,8 @@ var N3Parser = require('n3').Parser,
 var parallel = false;
 
 // Path to the tests and the tests' manifest
-var testPath = "http://www.w3.org/2013/TurtleTests/",
+// var testPath = "http://www.w3.org/2013/TurtleTests/",
+var testPath = "http://w3c.github.io/rdf-tests/turtle/",
     manifest = "manifest.ttl";
 
 // Prefixes
