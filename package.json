@@ -8,7 +8,7 @@
     "test": "node eye-earl-report.js"
   },
   "dependencies": {
-    "n3": "0.1.x",
+    "n3": "0.5.x",
     "request": "2.x",
     "colors": "0.6.x",
     "async": "0.1.x"
