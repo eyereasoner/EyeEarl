@@ -1,300 +1,301 @@
-[1mTurtle Terse RDF Triple Language Test Cases[22m
-[1mIRI_subject[22m: IRI subject [1m[32mOK[39m[22m
-[1mIRI_with_four_digit_numeric_escape[22m: IRI with four digit numeric escape (\u) [1m[32mOK[39m[22m
-[1mIRI_with_eight_digit_numeric_escape[22m: IRI with eight digit numeric escape (\U) [1m[32mOK[39m[22m
-[1mIRI_with_all_punctuation[22m: IRI with all punctuation [1m[32mOK[39m[22m
-[1mbareword_a_predicate[22m: bareword a predicate [1m[32mOK[39m[22m
-[1mold_style_prefix[22m: old-style prefix [1m[32mOK[39m[22m
-[1mSPARQL_style_prefix[22m: SPARQL-style prefix [1m[32mOK[39m[22m
-[1mprefixed_IRI_predicate[22m: prefixed IRI predicate [1m[32mOK[39m[22m
-[1mprefixed_IRI_object[22m: prefixed IRI object [1m[32mOK[39m[22m
-[1mprefix_only_IRI[22m: prefix-only IRI (p:) [1m[32mOK[39m[22m
-[1mprefix_with_PN_CHARS_BASE_character_boundaries[22m: prefix with PN CHARS BASE character boundaries (prefix: AZazÀÖØöø...:) [1m[32mOK[39m[22m
-[1mprefix_with_non_leading_extras[22m: prefix with_non_leading_extras (_:a·̀ͯ‿.⁀) [1m[32mOK[39m[22m
-[1mdefault_namespace_IRI[22m: default namespace IRI (:ln) [1m[32mOK[39m[22m
-[1mprefix_reassigned_and_used[22m: prefix reassigned and used [1m[32mOK[39m[22m
-[1mreserved_escaped_localName[22m: reserved-escaped local name [1m[32mOK[39m[22m
-[1mpercent_escaped_localName[22m: percent-escaped local name [1m[32mOK[39m[22m
-[1mHYPHEN_MINUS_in_localName[22m: HYPHEN-MINUS in local name [1m[32mOK[39m[22m
-[1munderscore_in_localName[22m: underscore in local name [1m[32mOK[39m[22m
-[1mlocalname_with_COLON[22m: localname with COLON [1m[32mOK[39m[22m
-[1mlocalName_with_assigned_nfc_bmp_PN_CHARS_BASE_character_boundaries[22m: localName with assigned, NFC-normalized, basic-multilingual-plane PN CHARS BASE character boundaries (p:AZazÀÖØöø...) [1m[32mOK[39m[22m
-[1mlocalName_with_assigned_nfc_PN_CHARS_BASE_character_boundaries[22m: localName with assigned, NFC-normalized PN CHARS BASE character boundaries (p:AZazÀÖØöø...) [1m[32mOK[39m[22m
-[1mlocalName_with_nfc_PN_CHARS_BASE_character_boundaries[22m: localName with nfc-normalize PN CHARS BASE character boundaries (p:AZazÀÖØöø...) [1m[32mOK[39m[22m
-[1mlocalName_with_leading_underscore[22m: localName with leading underscore (p:_) [1m[32mOK[39m[22m
-[1mlocalName_with_leading_digit[22m: localName with leading digit (p:_) [1m[32mOK[39m[22m
-[1mlocalName_with_non_leading_extras[22m: localName with_non_leading_extras (_:a·̀ͯ‿.⁀) [1m[32mOK[39m[22m
-[1mold_style_base[22m: old-style base [1m[32mOK[39m[22m
-[1mSPARQL_style_base[22m: SPARQL-style base [1m[32mOK[39m[22m
-[1mlabeled_blank_node_subject[22m: labeled blank node subject [1m[32mOK[39m[22m
-[1mlabeled_blank_node_object[22m: labeled blank node object [1m[32mOK[39m[22m
-[1mlabeled_blank_node_with_PN_CHARS_BASE_character_boundaries[22m: labeled blank node with PN_CHARS_BASE character boundaries (_:AZazÀÖØöø...) [1m[32mOK[39m[22m
-[1mlabeled_blank_node_with_leading_underscore[22m: labeled blank node with_leading_underscore (_:_) [1m[32mOK[39m[22m
-[1mlabeled_blank_node_with_leading_digit[22m: labeled blank node with_leading_digit (_:0) [1m[32mOK[39m[22m
-[1mlabeled_blank_node_with_non_leading_extras[22m: labeled blank node with_non_leading_extras (_:a·̀ͯ‿.⁀) [1m[32mOK[39m[22m
-[1manonymous_blank_node_subject[22m: anonymous blank node subject [1m[32mOK[39m[22m
-[1manonymous_blank_node_object[22m: anonymous blank node object [1m[32mOK[39m[22m
-[1msole_blankNodePropertyList[22m: sole blankNodePropertyList [ <p> <o> ] . [1m[32mOK[39m[22m
-[1mblankNodePropertyList_as_subject[22m: blankNodePropertyList as subject [ … ] <p> <o> . [1m[32mOK[39m[22m
-[1mblankNodePropertyList_as_object[22m: blankNodePropertyList as object <s> <p> [ … ] . [1m[32mOK[39m[22m
-[1mblankNodePropertyList_as_object_containing_objectList[22m: blankNodePropertyList as object containing objectList <s> <p> [ <p2> <o>,<o2> ] . [1m[32mOK[39m[22m
-[1mblankNodePropertyList_as_object_containing_objectList_of_two_objects[22m: blankNodePropertyList as object containing objectList of two objects <s> <p> [ <p2 <o> ] , <o2> . [1m[32mOK[39m[22m
-[1mblankNodePropertyList_with_multiple_triples[22m: blankNodePropertyList with multiple triples [ <s> <p> ; <s2> <p2> ] [1m[32mOK[39m[22m
-[1mnested_blankNodePropertyLists[22m: nested blankNodePropertyLists [ <p1> [ <p2> <o2> ] ; <p3> <o3> ] [1m[32mOK[39m[22m
-[1mblankNodePropertyList_containing_collection[22m: blankNodePropertyList containing collection [ <p1> ( … ) ] [1m[32mOK[39m[22m
-[1mcollection_subject[22m: collection subject [1m[32mOK[39m[22m
-[1mcollection_object[22m: collection object [1m[32mOK[39m[22m
-[1mempty_collection[22m: empty collection () [1m[32mOK[39m[22m
-[1mnested_collection[22m: nested collection (()) [1m[32mOK[39m[22m
-[1mfirst[22m: first, not last, non-empty nested collection [1m[32mOK[39m[22m
-[1mlast[22m: last, not first, non-empty nested collection [1m[32mOK[39m[22m
-[1mLITERAL1[22m: LITERAL1 'x' [1m[32mOK[39m[22m
-[1mLITERAL1_ascii_boundaries[22m: LITERAL1_ascii_boundaries '\x00\x09\x0b\x0c\x0e\x26\x28...' [1m[32mOK[39m[22m
-[1mLITERAL1_with_UTF8_boundaries[22m: LITERAL1_with_UTF8_boundaries '\x80\x7ff\x800\xfff...' [1m[32mOK[39m[22m
-[1mLITERAL1_all_controls[22m: LITERAL1_all_controls '\x00\x01\x02\x03\x04...' [1m[32mOK[39m[22m
-[1mLITERAL1_all_punctuation[22m: LITERAL1_all_punctuation '!"#$%&()...' [1m[32mOK[39m[22m
-[1mLITERAL_LONG1[22m: LITERAL_LONG1 '''x''' [1m[32mOK[39m[22m
-[1mLITERAL_LONG1_ascii_boundaries[22m: LITERAL_LONG1_ascii_boundaries '\x00\x26\x28...' [1m[32mOK[39m[22m
-[1mLITERAL_LONG1_with_UTF8_boundaries[22m: LITERAL_LONG1_with_UTF8_boundaries '\x80\x7ff\x800\xfff...' [1m[32mOK[39m[22m
-[1mLITERAL_LONG1_with_1_squote[22m: LITERAL_LONG1 with 1 squote '''a'b''' [1m[32mOK[39m[22m
-[1mLITERAL_LONG1_with_2_squotes[22m: LITERAL_LONG1 with 2 squotes '''a''b''' [1m[32mOK[39m[22m
-[1mLITERAL2[22m: LITERAL2 "x" [1m[32mOK[39m[22m
-[1mLITERAL2_ascii_boundaries[22m: LITERAL2_ascii_boundaries '\x00\x09\x0b\x0c\x0e\x21\x23...' [1m[32mOK[39m[22m
-[1mLITERAL2_with_UTF8_boundaries[22m: LITERAL2_with_UTF8_boundaries '\x80\x7ff\x800\xfff...' [1m[32mOK[39m[22m
-[1mLITERAL_LONG2[22m: LITERAL_LONG2 """x""" [1m[32mOK[39m[22m
-[1mLITERAL_LONG2_ascii_boundaries[22m: LITERAL_LONG2_ascii_boundaries '\x00\x21\x23...' [1m[32mOK[39m[22m
-[1mLITERAL_LONG2_with_UTF8_boundaries[22m: LITERAL_LONG2_with_UTF8_boundaries '\x80\x7ff\x800\xfff...' [1m[32mOK[39m[22m
-[1mLITERAL_LONG2_with_1_squote[22m: LITERAL_LONG2 with 1 squote """a"b""" [1m[32mOK[39m[22m
-[1mLITERAL_LONG2_with_2_squotes[22m: LITERAL_LONG2 with 2 squotes """a""b""" [1m[32mOK[39m[22m
-[1mliteral_with_CHARACTER_TABULATION[22m: literal with CHARACTER TABULATION [1m[32mOK[39m[22m
-[1mliteral_with_BACKSPACE[22m: literal with BACKSPACE [1m[32mOK[39m[22m
-[1mliteral_with_LINE_FEED[22m: literal with LINE FEED [1m[32mOK[39m[22m
-[1mliteral_with_CARRIAGE_RETURN[22m: literal with CARRIAGE RETURN [1m[32mOK[39m[22m
-[1mliteral_with_FORM_FEED[22m: literal with FORM FEED [1m[32mOK[39m[22m
-[1mliteral_with_REVERSE_SOLIDUS[22m: literal with REVERSE SOLIDUS [1m[32mOK[39m[22m
-[1mliteral_with_escaped_CHARACTER_TABULATION[22m: literal with escaped CHARACTER TABULATION [1m[32mOK[39m[22m
-[1mliteral_with_escaped_BACKSPACE[22m: literal with escaped BACKSPACE [1m[32mOK[39m[22m
-[1mliteral_with_escaped_LINE_FEED[22m: literal with escaped LINE FEED [1m[32mOK[39m[22m
-[1mliteral_with_escaped_CARRIAGE_RETURN[22m: literal with escaped CARRIAGE RETURN [1m[32mOK[39m[22m
-[1mliteral_with_escaped_FORM_FEED[22m: literal with escaped FORM FEED [1m[32mOK[39m[22m
-[1mliteral_with_numeric_escape4[22m: literal with numeric escape4 \u [1m[32mOK[39m[22m
-[1mliteral_with_numeric_escape8[22m: literal with numeric escape8 \U [1m[32mOK[39m[22m
-[1mIRIREF_datatype[22m: IRIREF datatype ""^^<t> [1m[32mOK[39m[22m
-[1mprefixed_name_datatype[22m: prefixed name datatype ""^^p:t [1m[32mOK[39m[22m
-[1mbareword_integer[22m: bareword integer [1m[32mOK[39m[22m
-[1mbareword_decimal[22m: bareword decimal [1m[32mOK[39m[22m
-[1mbareword_double[22m: bareword double [1m[32mOK[39m[22m
-[1mdouble_lower_case_e[22m: double lower case e [1m[32mOK[39m[22m
-[1mnegative_numeric[22m: negative numeric [1m[32mOK[39m[22m
-[1mpositive_numeric[22m: positive numeric [1m[32mOK[39m[22m
-[1mnumeric_with_leading_0[22m: numeric with leading 0 [1m[32mOK[39m[22m
-[1mliteral_true[22m: literal true [1m[32mOK[39m[22m
-[1mliteral_false[22m: literal false [1m[32mOK[39m[22m
-[1mlangtagged_non_LONG[22m: langtagged non-LONG "x"@en [1m[32mOK[39m[22m
-[1mlangtagged_LONG[22m: langtagged LONG """x"""@en [1m[32mOK[39m[22m
-[1mlantag_with_subtag[22m: lantag with subtag "x"@en-us [1m[32mOK[39m[22m
-[1mobjectList_with_two_objects[22m: objectList with two objects … <o1>,<o2> [1m[32mOK[39m[22m
-[1mpredicateObjectList_with_two_objectLists[22m: predicateObjectList with two objectLists … <o1>,<o2> [1m[32mOK[39m[22m
-[1mpredicateObjectList_with_blankNodePropertyList_as_object[22m: predicateObjectList_with_blankNodePropertyList_as_object <s> <p> [ <p2> <o> ] ; <p3> [ <p4> <o2> , <o3> ]  [1m[32mOK[39m[22m
-[1mrepeated_semis_at_end[22m: repeated semis at end <s> <p> <o> ;; <p2> <o2> . [1m[32mOK[39m[22m
-[1mrepeated_semis_not_at_end[22m: repeated semis not at end <s> <p> <o> ;;. [1m[32mOK[39m[22m
-[1mcomment_following_localName[22m: comment following localName [1m[32mOK[39m[22m
-[1mnumber_sign_following_localName[22m: number sign following localName [1m[32mOK[39m[22m
-[1mcomment_following_PNAME_NS[22m: comment following PNAME_NS [1m[32mOK[39m[22m
-[1mnumber_sign_following_PNAME_NS[22m: number sign following PNAME_NS [1m[32mOK[39m[22m
-[1mLITERAL_LONG2_with_REVERSE_SOLIDUS[22m: REVERSE SOLIDUS at end of LITERAL_LONG2 [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-num-05[22m: Bad number format (negative test) [1m[32mOK[39m[22m
-[1mtwo_LITERAL_LONG2s[22m: two LITERAL_LONG2s testing quote delimiter overrun [1m[32mOK[39m[22m
-[1mlangtagged_LONG_with_subtag[22m: langtagged LONG with subtag """Cheers"""@en-UK [1m[32mOK[39m[22m
-[1mturtle-syntax-file-01[22m: Empty file [1m[32mOK[39m[22m
-[1mturtle-syntax-file-02[22m: Only comment [1m[32mOK[39m[22m
-[1mturtle-syntax-file-03[22m: One comment, one empty line [1m[32mOK[39m[22m
-[1mturtle-syntax-uri-01[22m: Only IRIs [1m[32mOK[39m[22m
-[1mturtle-syntax-uri-02[22m: IRIs with Unicode escape [1m[32mOK[39m[22m
-[1mturtle-syntax-uri-03[22m: IRIs with long Unicode escape [1m[32mOK[39m[22m
-[1mturtle-syntax-uri-04[22m: Legal IRIs [1m[32mOK[39m[22m
-[1mturtle-syntax-base-01[22m: @base [1m[32mOK[39m[22m
-[1mturtle-syntax-base-02[22m: BASE [1m[32mOK[39m[22m
-[1mturtle-syntax-base-03[22m: @base with relative IRIs [1m[32mOK[39m[22m
-[1mturtle-syntax-base-04[22m: base with relative IRIs [1m[32mOK[39m[22m
-[1mturtle-syntax-prefix-01[22m: @prefix [1m[32mOK[39m[22m
-[1mturtle-syntax-prefix-02[22m: PreFIX [1m[32mOK[39m[22m
-[1mturtle-syntax-prefix-03[22m: Empty PREFIX [1m[32mOK[39m[22m
-[1mturtle-syntax-prefix-04[22m: Empty @prefix with % escape [1m[32mOK[39m[22m
-[1mturtle-syntax-prefix-05[22m: @prefix with no suffix [1m[32mOK[39m[22m
-[1mturtle-syntax-prefix-06[22m: colon is a legal pname character [1m[32mOK[39m[22m
-[1mturtle-syntax-prefix-07[22m: dash is a legal pname character [1m[32mOK[39m[22m
-[1mturtle-syntax-prefix-08[22m: underscore is a legal pname character [1m[32mOK[39m[22m
-[1mturtle-syntax-prefix-09[22m: percents in pnames [1m[32mOK[39m[22m
-[1mturtle-syntax-string-01[22m: string literal [1m[32mOK[39m[22m
-[1mturtle-syntax-string-02[22m: langString literal [1m[32mOK[39m[22m
-[1mturtle-syntax-string-03[22m: langString literal with region [1m[32mOK[39m[22m
-[1mturtle-syntax-string-04[22m: squote string literal [1m[32mOK[39m[22m
-[1mturtle-syntax-string-05[22m: squote langString literal [1m[32mOK[39m[22m
-[1mturtle-syntax-string-06[22m: squote langString literal with region [1m[32mOK[39m[22m
-[1mturtle-syntax-string-07[22m: long string literal with embedded single- and double-quotes [1m[32mOK[39m[22m
-[1mturtle-syntax-string-08[22m: long string literal with embedded newline [1m[32mOK[39m[22m
-[1mturtle-syntax-string-09[22m: squote long string literal with embedded single- and double-quotes [1m[32mOK[39m[22m
-[1mturtle-syntax-string-10[22m: long langString literal with embedded newline [1m[32mOK[39m[22m
-[1mturtle-syntax-string-11[22m: squote long langString literal with embedded newline [1m[32mOK[39m[22m
-[1mturtle-syntax-str-esc-01[22m: string literal with escaped newline [1m[32mOK[39m[22m
-[1mturtle-syntax-str-esc-02[22m: string literal with Unicode escape [1m[32mOK[39m[22m
-[1mturtle-syntax-str-esc-03[22m: string literal with long Unicode escape [1m[32mOK[39m[22m
-[1mturtle-syntax-pname-esc-01[22m: pname with back-slash escapes [1m[32mOK[39m[22m
-[1mturtle-syntax-pname-esc-02[22m: pname with back-slash escapes (2) [1m[32mOK[39m[22m
-[1mturtle-syntax-pname-esc-03[22m: pname with back-slash escapes (3) [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-01[22m: bnode subject [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-02[22m: bnode object [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-03[22m: bnode property list object [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-04[22m: bnode property list object (2) [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-05[22m: bnode property list subject [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-06[22m: labeled bnode subject [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-07[22m: labeled bnode subject and object [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-08[22m: bare bnode property list [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-09[22m: bnode property list [1m[32mOK[39m[22m
-[1mturtle-syntax-bnode-10[22m: mixed bnode property list and triple [1m[32mOK[39m[22m
-[1mturtle-syntax-number-01[22m: integer literal [1m[32mOK[39m[22m
-[1mturtle-syntax-number-02[22m: negative integer literal [1m[32mOK[39m[22m
-[1mturtle-syntax-number-03[22m: positive integer literal [1m[32mOK[39m[22m
-[1mturtle-syntax-number-04[22m: decimal literal [1m[32mOK[39m[22m
-[1mturtle-syntax-number-05[22m: decimal literal (no leading digits) [1m[32mOK[39m[22m
-[1mturtle-syntax-number-06[22m: negative decimal literal [1m[32mOK[39m[22m
-[1mturtle-syntax-number-07[22m: positive decimal literal [1m[32mOK[39m[22m
-[1mturtle-syntax-number-08[22m: integer literal with decimal lexical confusion [1m[32mOK[39m[22m
-[1mturtle-syntax-number-09[22m: double literal [1m[32mOK[39m[22m
-[1mturtle-syntax-number-10[22m: negative double literal [1m[32mOK[39m[22m
-[1mturtle-syntax-number-11[22m: double literal no fraction [1m[32mOK[39m[22m
-[1mturtle-syntax-datatypes-01[22m: xsd:byte literal [1m[32mOK[39m[22m
-[1mturtle-syntax-datatypes-02[22m: integer as xsd:string [1m[32mOK[39m[22m
-[1mturtle-syntax-kw-01[22m: boolean literal (true) [1m[32mOK[39m[22m
-[1mturtle-syntax-kw-02[22m: boolean literal (false) [1m[32mOK[39m[22m
-[1mturtle-syntax-kw-03[22m: 'a' as keyword [1m[32mOK[39m[22m
-[1mturtle-syntax-struct-01[22m: object list [1m[32mOK[39m[22m
-[1mturtle-syntax-struct-02[22m: predicate list with object list [1m[32mOK[39m[22m
-[1mturtle-syntax-struct-03[22m: predicate list with object list and dangling ';' [1m[32mOK[39m[22m
-[1mturtle-syntax-struct-04[22m: predicate list with multiple ;; [1m[32mOK[39m[22m
-[1mturtle-syntax-struct-05[22m: predicate list with multiple ;; [1m[32mOK[39m[22m
-[1mturtle-eval-lists-01[22m: empty list [1m[32mOK[39m[22m
-[1mturtle-eval-lists-02[22m: mixed list [1m[32mOK[39m[22m
-[1mturtle-eval-lists-03[22m: isomorphic list as subject and object [1m[32mOK[39m[22m
-[1mturtle-eval-lists-04[22m: lists of lists [1m[32mOK[39m[22m
-[1mturtle-eval-lists-05[22m: mixed lists with embedded lists [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-uri-01[22m: Bad IRI : space (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-uri-02[22m: Bad IRI : bad escape (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-uri-03[22m: Bad IRI : bad long escape (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-uri-04[22m: Bad IRI : character escapes not allowed (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-uri-05[22m: Bad IRI : character escapes not allowed (2) (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-prefix-01[22m: No prefix (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-prefix-02[22m: No prefix (2) (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-prefix-03[22m: @prefix without URI (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-prefix-04[22m: @prefix without prefix name (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-prefix-05[22m: @prefix without ':' (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-base-01[22m: @base without URI (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-base-02[22m: @base in wrong case (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-base-03[22m: BASE without URI (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-01[22m: Turtle is not TriG (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-02[22m: Turtle is not N3 (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-03[22m: Turtle is not NQuads (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-04[22m: Turtle does not allow literals-as-subjects (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-05[22m: Turtle does not allow literals-as-predicates (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-06[22m: Turtle does not allow bnodes-as-predicates (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-07[22m: Turtle does not allow labeled bnodes-as-predicates (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-kw-01[22m: 'A' is not a keyword (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-kw-02[22m: 'a' cannot be used as subject (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-kw-03[22m: 'a' cannot be used as object (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-kw-04[22m: 'true' cannot be used as subject (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-kw-05[22m: 'true' cannot be used as object (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-01[22m: {} fomulae not in Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-02[22m: = is not Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-03[22m: N3 paths not in Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-04[22m: N3 paths not in Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-05[22m: N3 is...of not in Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-06[22m: N3 paths not in Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-07[22m: @keywords is not Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-08[22m: @keywords is not Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-09[22m: => is not Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-10[22m: <= is not Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-11[22m: @forSome is not Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-12[22m: @forAll is not Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-n3-extras-13[22m: @keywords is not Turtle (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-08[22m: missing '.' (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-09[22m: extra '.' (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-10[22m: extra '.' (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-11[22m: trailing ';' no '.' (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-12[22m: subject, predicate, no object (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-13[22m: subject, predicate, no object (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-14[22m: literal as subject (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-15[22m: literal as predicate (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-16[22m: bnode as predicate (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-struct-17[22m: labeled bnode as predicate (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-lang-01[22m: langString with bad lang (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-esc-01[22m: Bad string escape (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-esc-02[22m: Bad string escape (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-esc-03[22m: Bad string escape (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-esc-04[22m: Bad string escape (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-pname-01[22m: '~' must be escaped in pname (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-pname-02[22m: Bad %-sequence in pname (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-pname-03[22m: Bad unicode escape in pname (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-string-01[22m: mismatching string literal open/close (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-string-02[22m: mismatching string literal open/close (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-string-03[22m: mismatching string literal long/short (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-string-04[22m: mismatching long string literal open/close (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-string-05[22m: Long literal with missing end (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-string-06[22m: Long literal with extra quote (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-string-07[22m: Long literal with extra squote (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-num-01[22m: Bad number format (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-num-02[22m: Bad number format (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-num-03[22m: Bad number format (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-num-04[22m: Bad number format (negative test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-num-05[22m: Bad number format (negative test) [1m[32mOK[39m[22m
-[1mturtle-eval-struct-01[22m: triple with IRIs [1m[32mOK[39m[22m
-[1mturtle-eval-struct-02[22m: triple with IRIs and embedded whitespace [1m[32mOK[39m[22m
-[1mturtle-subm-01[22m: Blank subject [1m[32mOK[39m[22m
-[1mturtle-subm-02[22m: @prefix and qnames [1m[32mOK[39m[22m
-[1mturtle-subm-03[22m: , operator [1m[32mOK[39m[22m
-[1mturtle-subm-04[22m: ; operator [1m[32mOK[39m[22m
-[1mturtle-subm-05[22m: empty [] as subject and object [1m[32mOK[39m[22m
-[1mturtle-subm-06[22m: non-empty [] as subject and object [1m[32mOK[39m[22m
-[1mturtle-subm-07[22m: 'a' as predicate [1m[32mOK[39m[22m
-[1mturtle-subm-08[22m: simple collection [1m[32mOK[39m[22m
-[1mturtle-subm-09[22m: empty collection [1m[32mOK[39m[22m
-[1mturtle-subm-10[22m: integer datatyped literal [1m[32mOK[39m[22m
-[1mturtle-subm-11[22m: decimal integer canonicalization [1m[32mOK[39m[22m
-[1mturtle-subm-12[22m: - and _ in names and qnames [1m[32mOK[39m[22m
-[1mturtle-subm-13[22m: tests for rdf:_<numbers> and other qnames starting with _ [1m[32mOK[39m[22m
-[1mturtle-subm-14[22m: bare : allowed [1m[32mOK[39m[22m
-[1mturtle-subm-15[22m: simple long literal [1m[32mOK[39m[22m
-[1mturtle-subm-16[22m: long literals with escapes [1m[32mOK[39m[22m
-[1mturtle-subm-17[22m: floating point number [1m[32mOK[39m[22m
-[1mturtle-subm-18[22m: empty literals, normal and long variant [1m[32mOK[39m[22m
-[1mturtle-subm-19[22m: positive integer, decimal and doubles [1m[32mOK[39m[22m
-[1mturtle-subm-20[22m: negative integer, decimal and doubles [1m[32mOK[39m[22m
-[1mturtle-subm-21[22m: long literal ending in double quote [1m[32mOK[39m[22m
-[1mturtle-subm-22[22m: boolean literals [1m[32mOK[39m[22m
-[1mturtle-subm-23[22m: comments [1m[32mOK[39m[22m
-[1mturtle-subm-24[22m: no final mewline [1m[32mOK[39m[22m
-[1mturtle-subm-25[22m: repeating a @prefix changes pname definition [1m[32mOK[39m[22m
-[1mturtle-subm-26[22m: Variations on decimal canonicalization [1m[32mOK[39m[22m
-[1mturtle-subm-27[22m: Repeating @base changes base for relative IRI lookup [1m[32mOK[39m[22m
-[1mturtle-eval-bad-01[22m: Bad IRI : good escape, bad charcater (negative evaluation test) [1m[32mOK[39m[22m
-[1mturtle-eval-bad-02[22m: Bad IRI : hex 3C is < (negative evaluation test) [1m[32mOK[39m[22m
-[1mturtle-eval-bad-03[22m: Bad IRI : hex 3E is  (negative evaluation test) [1m[32mOK[39m[22m
-[1mturtle-eval-bad-04[22m: Bad IRI : {abc} (negative evaluation test) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-blank-label-dot-end[22m: Blank node label must not end in dot [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-ln-dash-start[22m: Local name must not begin with dash [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-ln-escape-start[22m: Bad hex escape at start of local name [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-ln-escape[22m: Bad hex escape in local name [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-missing-ns-dot-end[22m: Prefix must not end in dot (error in triple, not prefix directive like turtle-syntax-bad-ns-dot-end) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-missing-ns-dot-start[22m: Prefix must not start with dot (error in triple, not prefix directive like turtle-syntax-bad-ns-dot-end) [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-ns-dot-end[22m: Prefix must not end in dot [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-ns-dot-start[22m: Prefix must not start with dot [1m[32mOK[39m[22m
-[1mturtle-syntax-bad-number-dot-in-anon[22m: Dot delimeter may not appear in anonymous nodes [1m[32mOK[39m[22m
-[1mturtle-syntax-blank-label[22m: Characters allowed in blank node labels [1m[32mOK[39m[22m
-[1mturtle-syntax-ln-colons[22m: Colons in pname local names [1m[32mOK[39m[22m
-[1mturtle-syntax-ln-dots[22m: Dots in pname local names [1m[32mOK[39m[22m
-[1mturtle-syntax-ns-dots[22m: Dots in namespace names [1m[32mOK[39m[22m
-[1mIRI-resolution-01[22m: IRI resolution (RFC3986 original cases) [1m[32mOK[39m[22m
-[1mIRI-resolution-02[22m: IRI resolution (RFC3986 using base IRI with trailing slash) [1m[32mOK[39m[22m
-[1mIRI-resolution-07[22m: IRI resolution (RFC3986 using base IRI with file path) [1m[32mOK[39m[22m
-[1mIRI-resolution-08[22m: IRI resolution (miscellaneous cases) [1m[32mOK[39m[22m
-[1m* passed 298 out of 298 tests[22m
+Turtle Terse RDF Triple Language Test Cases
+IRI_subject: IRI subject OK
+IRI_with_four_digit_numeric_escape: IRI with four digit numeric escape (\u) OK
+IRI_with_eight_digit_numeric_escape: IRI with eight digit numeric escape (\U) OK
+IRI_with_all_punctuation: IRI with all punctuation OK
+bareword_a_predicate: bareword a predicate OK
+old_style_prefix: old-style prefix OK
+SPARQL_style_prefix: SPARQL-style prefix OK
+prefixed_IRI_predicate: prefixed IRI predicate OK
+prefixed_IRI_object: prefixed IRI object OK
+prefix_only_IRI: prefix-only IRI (p:) OK
+prefix_with_PN_CHARS_BASE_character_boundaries: prefix with PN CHARS BASE character boundaries (prefix: AZazÀÖØöø...:) OK
+prefix_with_non_leading_extras: prefix with_non_leading_extras (_:a·̀ͯ‿.⁀) OK
+default_namespace_IRI: default namespace IRI (:ln) OK
+prefix_reassigned_and_used: prefix reassigned and used OK
+reserved_escaped_localName: reserved-escaped local name OK
+percent_escaped_localName: percent-escaped local name OK
+HYPHEN_MINUS_in_localName: HYPHEN-MINUS in local name OK
+underscore_in_localName: underscore in local name OK
+localname_with_COLON: localname with COLON OK
+localName_with_assigned_nfc_bmp_PN_CHARS_BASE_character_boundaries: localName with assigned, NFC-normalized, basic-multilingual-plane PN CHARS BASE character boundaries (p:AZazÀÖØöø...) OK
+localName_with_assigned_nfc_PN_CHARS_BASE_character_boundaries: localName with assigned, NFC-normalized PN CHARS BASE character boundaries (p:AZazÀÖØöø...) OK
+localName_with_nfc_PN_CHARS_BASE_character_boundaries: localName with nfc-normalize PN CHARS BASE character boundaries (p:AZazÀÖØöø...) OK
+localName_with_leading_underscore: localName with leading underscore (p:_) OK
+localName_with_leading_digit: localName with leading digit (p:_) OK
+localName_with_non_leading_extras: localName with_non_leading_extras (_:a·̀ͯ‿.⁀) OK
+old_style_base: old-style base OK
+SPARQL_style_base: SPARQL-style base OK
+labeled_blank_node_subject: labeled blank node subject OK
+labeled_blank_node_object: labeled blank node object OK
+labeled_blank_node_with_PN_CHARS_BASE_character_boundaries: labeled blank node with PN_CHARS_BASE character boundaries (_:AZazÀÖØöø...) OK
+labeled_blank_node_with_leading_underscore: labeled blank node with_leading_underscore (_:_) OK
+labeled_blank_node_with_leading_digit: labeled blank node with_leading_digit (_:0) OK
+labeled_blank_node_with_non_leading_extras: labeled blank node with_non_leading_extras (_:a·̀ͯ‿.⁀) OK
+anonymous_blank_node_subject: anonymous blank node subject OK
+anonymous_blank_node_object: anonymous blank node object OK
+sole_blankNodePropertyList: sole blankNodePropertyList [ <p> <o> ] . OK
+blankNodePropertyList_as_subject: blankNodePropertyList as subject [ … ] <p> <o> . OK
+blankNodePropertyList_as_object: blankNodePropertyList as object <s> <p> [ … ] . OK
+blankNodePropertyList_as_object_containing_objectList: blankNodePropertyList as object containing objectList <s> <p> [ <p2> <o>,<o2> ] . OK
+blankNodePropertyList_as_object_containing_objectList_of_two_objects: blankNodePropertyList as object containing objectList of two objects <s> <p> [ <p2 <o> ] , <o2> . OK
+blankNodePropertyList_with_multiple_triples: blankNodePropertyList with multiple triples [ <s> <p> ; <s2> <p2> ] OK
+nested_blankNodePropertyLists: nested blankNodePropertyLists [ <p1> [ <p2> <o2> ] ; <p3> <o3> ] OK
+blankNodePropertyList_containing_collection: blankNodePropertyList containing collection [ <p1> ( … ) ] OK
+collection_subject: collection subject OK
+collection_object: collection object OK
+empty_collection: empty collection () OK
+nested_collection: nested collection (()) OK
+first: first, not last, non-empty nested collection OK
+last: last, not first, non-empty nested collection OK
+LITERAL1: LITERAL1 'x' OK
+LITERAL1_ascii_boundaries: LITERAL1_ascii_boundaries '\x00\x09\x0b\x0c\x0e\x26\x28...' OK
+LITERAL1_with_UTF8_boundaries: LITERAL1_with_UTF8_boundaries '\x80\x7ff\x800\xfff...' OK
+LITERAL1_all_controls: LITERAL1_all_controls '\x00\x01\x02\x03\x04...' OK
+LITERAL1_all_punctuation: LITERAL1_all_punctuation '!"#$%&()...' OK
+LITERAL_LONG1: LITERAL_LONG1 '''x''' OK
+LITERAL_LONG1_ascii_boundaries: LITERAL_LONG1_ascii_boundaries '\x00\x26\x28...' OK
+LITERAL_LONG1_with_UTF8_boundaries: LITERAL_LONG1_with_UTF8_boundaries '\x80\x7ff\x800\xfff...' OK
+LITERAL_LONG1_with_1_squote: LITERAL_LONG1 with 1 squote '''a'b''' OK
+LITERAL_LONG1_with_2_squotes: LITERAL_LONG1 with 2 squotes '''a''b''' OK
+LITERAL2: LITERAL2 "x" OK
+LITERAL2_ascii_boundaries: LITERAL2_ascii_boundaries '\x00\x09\x0b\x0c\x0e\x21\x23...' OK
+LITERAL2_with_UTF8_boundaries: LITERAL2_with_UTF8_boundaries '\x80\x7ff\x800\xfff...' OK
+LITERAL_LONG2: LITERAL_LONG2 """x""" OK
+LITERAL_LONG2_ascii_boundaries: LITERAL_LONG2_ascii_boundaries '\x00\x21\x23...' OK
+LITERAL_LONG2_with_UTF8_boundaries: LITERAL_LONG2_with_UTF8_boundaries '\x80\x7ff\x800\xfff...' OK
+LITERAL_LONG2_with_1_squote: LITERAL_LONG2 with 1 squote """a"b""" OK
+LITERAL_LONG2_with_2_squotes: LITERAL_LONG2 with 2 squotes """a""b""" OK
+literal_with_CHARACTER_TABULATION: literal with CHARACTER TABULATION OK
+literal_with_BACKSPACE: literal with BACKSPACE OK
+literal_with_LINE_FEED: literal with LINE FEED OK
+literal_with_CARRIAGE_RETURN: literal with CARRIAGE RETURN OK
+literal_with_FORM_FEED: literal with FORM FEED OK
+literal_with_REVERSE_SOLIDUS: literal with REVERSE SOLIDUS OK
+literal_with_escaped_CHARACTER_TABULATION: literal with escaped CHARACTER TABULATION OK
+literal_with_escaped_BACKSPACE: literal with escaped BACKSPACE OK
+literal_with_escaped_LINE_FEED: literal with escaped LINE FEED OK
+literal_with_escaped_CARRIAGE_RETURN: literal with escaped CARRIAGE RETURN OK
+literal_with_escaped_FORM_FEED: literal with escaped FORM FEED OK
+literal_with_numeric_escape4: literal with numeric escape4 \u OK
+literal_with_numeric_escape8: literal with numeric escape8 \U OK
+IRIREF_datatype: IRIREF datatype ""^^<t> OK
+prefixed_name_datatype: prefixed name datatype ""^^p:t OK
+bareword_integer: bareword integer OK
+bareword_decimal: bareword decimal OK
+bareword_double: bareword double OK
+double_lower_case_e: double lower case e OK
+negative_numeric: negative numeric OK
+positive_numeric: positive numeric OK
+numeric_with_leading_0: numeric with leading 0 OK
+literal_true: literal true OK
+literal_false: literal false OK
+langtagged_non_LONG: langtagged non-LONG "x"@en OK
+langtagged_LONG: langtagged LONG """x"""@en OK
+lantag_with_subtag: lantag with subtag "x"@en-us OK
+objectList_with_two_objects: objectList with two objects … <o1>,<o2> OK
+predicateObjectList_with_two_objectLists: predicateObjectList with two objectLists … <o1>,<o2> OK
+predicateObjectList_with_blankNodePropertyList_as_object: predicateObjectList_with_blankNodePropertyList_as_object <s> <p> [ <p2> <o> ] ; <p3> [ <p4> <o2> , <o3> ]  OK
+repeated_semis_at_end: repeated semis at end <s> <p> <o> ;; <p2> <o2> . OK
+repeated_semis_not_at_end: repeated semis not at end <s> <p> <o> ;;. OK
+comment_following_localName: comment following localName OK
+number_sign_following_localName: number sign following localName OK
+comment_following_PNAME_NS: comment following PNAME_NS OK
+number_sign_following_PNAME_NS: number sign following PNAME_NS OK
+LITERAL_LONG2_with_REVERSE_SOLIDUS: REVERSE SOLIDUS at end of LITERAL_LONG2 OK
+turtle-syntax-bad-num-05: Bad number format (negative test) OK
+two_LITERAL_LONG2s: two LITERAL_LONG2s testing quote delimiter overrun OK
+langtagged_LONG_with_subtag: langtagged LONG with subtag """Cheers"""@en-UK OK
+turtle-syntax-file-01: Empty file OK
+turtle-syntax-file-02: Only comment OK
+turtle-syntax-file-03: One comment, one empty line OK
+turtle-syntax-uri-01: Only IRIs OK
+turtle-syntax-uri-02: IRIs with Unicode escape OK
+turtle-syntax-uri-03: IRIs with long Unicode escape OK
+turtle-syntax-uri-04: Legal IRIs OK
+turtle-syntax-base-01: @base OK
+turtle-syntax-base-02: BASE OK
+turtle-syntax-base-03: @base with relative IRIs OK
+turtle-syntax-base-04: base with relative IRIs OK
+turtle-syntax-prefix-01: @prefix OK
+turtle-syntax-prefix-02: PreFIX OK
+turtle-syntax-prefix-03: Empty PREFIX OK
+turtle-syntax-prefix-04: Empty @prefix with % escape OK
+turtle-syntax-prefix-05: @prefix with no suffix OK
+turtle-syntax-prefix-06: colon is a legal pname character OK
+turtle-syntax-prefix-07: dash is a legal pname character OK
+turtle-syntax-prefix-08: underscore is a legal pname character OK
+turtle-syntax-prefix-09: percents in pnames OK
+turtle-syntax-string-01: string literal OK
+turtle-syntax-string-02: langString literal OK
+turtle-syntax-string-03: langString literal with region OK
+turtle-syntax-string-04: squote string literal OK
+turtle-syntax-string-05: squote langString literal OK
+turtle-syntax-string-06: squote langString literal with region OK
+turtle-syntax-string-07: long string literal with embedded single- and double-quotes OK
+turtle-syntax-string-08: long string literal with embedded newline OK
+turtle-syntax-string-09: squote long string literal with embedded single- and double-quotes OK
+turtle-syntax-string-10: long langString literal with embedded newline OK
+turtle-syntax-string-11: squote long langString literal with embedded newline OK
+turtle-syntax-str-esc-01: string literal with escaped newline OK
+turtle-syntax-str-esc-02: string literal with Unicode escape OK
+turtle-syntax-str-esc-03: string literal with long Unicode escape OK
+turtle-syntax-pname-esc-01: pname with back-slash escapes OK
+turtle-syntax-pname-esc-02: pname with back-slash escapes (2) OK
+turtle-syntax-pname-esc-03: pname with back-slash escapes (3) OK
+turtle-syntax-bnode-01: bnode subject OK
+turtle-syntax-bnode-02: bnode object OK
+turtle-syntax-bnode-03: bnode property list object OK
+turtle-syntax-bnode-04: bnode property list object (2) OK
+turtle-syntax-bnode-05: bnode property list subject OK
+turtle-syntax-bnode-06: labeled bnode subject OK
+turtle-syntax-bnode-07: labeled bnode subject and object OK
+turtle-syntax-bnode-08: bare bnode property list OK
+turtle-syntax-bnode-09: bnode property list OK
+turtle-syntax-bnode-10: mixed bnode property list and triple OK
+turtle-syntax-number-01: integer literal OK
+turtle-syntax-number-02: negative integer literal OK
+turtle-syntax-number-03: positive integer literal OK
+turtle-syntax-number-04: decimal literal OK
+turtle-syntax-number-05: decimal literal (no leading digits) OK
+turtle-syntax-number-06: negative decimal literal OK
+turtle-syntax-number-07: positive decimal literal OK
+turtle-syntax-number-08: integer literal with decimal lexical confusion OK
+turtle-syntax-number-09: double literal OK
+turtle-syntax-number-10: negative double literal OK
+turtle-syntax-number-11: double literal no fraction OK
+turtle-syntax-datatypes-01: xsd:byte literal OK
+turtle-syntax-datatypes-02: integer as xsd:string OK
+turtle-syntax-kw-01: boolean literal (true) OK
+turtle-syntax-kw-02: boolean literal (false) OK
+turtle-syntax-kw-03: 'a' as keyword OK
+turtle-syntax-struct-01: object list OK
+turtle-syntax-struct-02: predicate list with object list OK
+turtle-syntax-struct-03: predicate list with object list and dangling ';' OK
+turtle-syntax-struct-04: predicate list with multiple ;; OK
+turtle-syntax-struct-05: predicate list with multiple ;; OK
+turtle-eval-lists-01: empty list OK
+turtle-eval-lists-02: mixed list OK
+turtle-eval-lists-03: isomorphic list as subject and object OK
+turtle-eval-lists-04: lists of lists OK
+turtle-eval-lists-05: mixed lists with embedded lists OK
+turtle-syntax-bad-uri-01: Bad IRI : space (negative test) OK
+turtle-syntax-bad-uri-02: Bad IRI : bad escape (negative test) OK
+turtle-syntax-bad-uri-03: Bad IRI : bad long escape (negative test) OK
+turtle-syntax-bad-uri-04: Bad IRI : character escapes not allowed (negative test) OK
+turtle-syntax-bad-uri-05: Bad IRI : character escapes not allowed (2) (negative test) OK
+turtle-syntax-bad-prefix-01: No prefix (negative test) OK
+turtle-syntax-bad-prefix-02: No prefix (2) (negative test) OK
+turtle-syntax-bad-prefix-03: @prefix without URI (negative test) OK
+turtle-syntax-bad-prefix-04: @prefix without prefix name (negative test) OK
+turtle-syntax-bad-prefix-05: @prefix without ':' (negative test) OK
+turtle-syntax-bad-base-01: @base without URI (negative test) OK
+turtle-syntax-bad-base-02: @base in wrong case (negative test) OK
+turtle-syntax-bad-base-03: BASE without URI (negative test) OK
+turtle-syntax-bad-struct-01: Turtle is not TriG (negative test) OK
+turtle-syntax-bad-struct-02: Turtle is not N3 (negative test) OK
+turtle-syntax-bad-struct-03: Turtle is not NQuads (negative test) OK
+turtle-syntax-bad-struct-04: Turtle does not allow literals-as-subjects (negative test) OK
+turtle-syntax-bad-struct-05: Turtle does not allow literals-as-predicates (negative test) OK
+turtle-syntax-bad-struct-06: Turtle does not allow bnodes-as-predicates (negative test) OK
+turtle-syntax-bad-struct-07: Turtle does not allow labeled bnodes-as-predicates (negative test) OK
+turtle-syntax-bad-kw-01: 'A' is not a keyword (negative test) OK
+turtle-syntax-bad-kw-02: 'a' cannot be used as subject (negative test) OK
+turtle-syntax-bad-kw-03: 'a' cannot be used as object (negative test) OK
+turtle-syntax-bad-kw-04: 'true' cannot be used as subject (negative test) OK
+turtle-syntax-bad-kw-05: 'true' cannot be used as object (negative test) OK
+turtle-syntax-bad-n3-extras-01: {} fomulae not in Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-02: = is not Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-03: N3 paths not in Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-04: N3 paths not in Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-05: N3 is...of not in Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-06: N3 paths not in Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-07: @keywords is not Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-08: @keywords is not Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-09: => is not Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-10: <= is not Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-11: @forSome is not Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-12: @forAll is not Turtle (negative test) OK
+turtle-syntax-bad-n3-extras-13: @keywords is not Turtle (negative test) OK
+turtle-syntax-bad-struct-08: missing '.' (negative test) OK
+turtle-syntax-bad-struct-09: extra '.' (negative test) OK
+turtle-syntax-bad-struct-10: extra '.' (negative test) OK
+turtle-syntax-bad-struct-11: trailing ';' no '.' (negative test) OK
+turtle-syntax-bad-struct-12: subject, predicate, no object (negative test) OK
+turtle-syntax-bad-struct-13: subject, predicate, no object (negative test) OK
+turtle-syntax-bad-struct-14: literal as subject (negative test) OK
+turtle-syntax-bad-struct-15: literal as predicate (negative test) OK
+turtle-syntax-bad-struct-16: bnode as predicate (negative test) OK
+turtle-syntax-bad-struct-17: labeled bnode as predicate (negative test) OK
+turtle-syntax-bad-lang-01: langString with bad lang (negative test) OK
+turtle-syntax-bad-esc-01: Bad string escape (negative test) OK
+turtle-syntax-bad-esc-02: Bad string escape (negative test) OK
+turtle-syntax-bad-esc-03: Bad string escape (negative test) OK
+turtle-syntax-bad-esc-04: Bad string escape (negative test) OK
+turtle-syntax-bad-pname-01: '~' must be escaped in pname (negative test) OK
+turtle-syntax-bad-pname-02: Bad %-sequence in pname (negative test) OK
+turtle-syntax-bad-pname-03: Bad unicode escape in pname (negative test) OK
+turtle-syntax-bad-string-01: mismatching string literal open/close (negative test) OK
+turtle-syntax-bad-string-02: mismatching string literal open/close (negative test) OK
+turtle-syntax-bad-string-03: mismatching string literal long/short (negative test) OK
+turtle-syntax-bad-string-04: mismatching long string literal open/close (negative test) OK
+turtle-syntax-bad-string-05: Long literal with missing end (negative test) OK
+turtle-syntax-bad-string-06: Long literal with extra quote (negative test) OK
+turtle-syntax-bad-string-07: Long literal with extra squote (negative test) OK
+turtle-syntax-bad-num-01: Bad number format (negative test) OK
+turtle-syntax-bad-num-02: Bad number format (negative test) OK
+turtle-syntax-bad-num-03: Bad number format (negative test) OK
+turtle-syntax-bad-num-04: Bad number format (negative test) OK
+turtle-syntax-bad-num-05: Bad number format (negative test) OK
+turtle-eval-struct-01: triple with IRIs OK
+turtle-eval-struct-02: triple with IRIs and embedded whitespace OK
+turtle-subm-01: Blank subject OK
+turtle-subm-02: @prefix and qnames OK
+turtle-subm-03: , operator OK
+turtle-subm-04: ; operator OK
+turtle-subm-05: empty [] as subject and object OK
+turtle-subm-06: non-empty [] as subject and object OK
+turtle-subm-07: 'a' as predicate OK
+turtle-subm-08: simple collection OK
+turtle-subm-09: empty collection OK
+turtle-subm-10: integer datatyped literal OK
+turtle-subm-11: decimal integer canonicalization OK
+turtle-subm-12: - and _ in names and qnames OK
+turtle-subm-13: tests for rdf:_<numbers> and other qnames starting with _ OK
+turtle-subm-14: bare : allowed OK
+turtle-subm-15: simple long literal OK
+turtle-subm-16: long literals with escapes OK
+turtle-subm-17: floating point number OK
+turtle-subm-18: empty literals, normal and long variant OK
+turtle-subm-19: positive integer, decimal and doubles OK
+turtle-subm-20: negative integer, decimal and doubles OK
+turtle-subm-21: long literal ending in double quote OK
+turtle-subm-22: boolean literals OK
+turtle-subm-23: comments OK
+turtle-subm-24: no final mewline OK
+turtle-subm-25: repeating a @prefix changes pname definition OK
+turtle-subm-26: Variations on decimal canonicalization OK
+turtle-subm-27: Repeating @base changes base for relative IRI lookup OK
+turtle-eval-bad-01: Bad IRI : good escape, bad charcater (negative evaluation test) OK
+turtle-eval-bad-02: Bad IRI : hex 3C is < (negative evaluation test) OK
+turtle-eval-bad-03: Bad IRI : hex 3E is  (negative evaluation test) OK
+turtle-eval-bad-04: Bad IRI : {abc} (negative evaluation test) OK
+turtle-syntax-bad-blank-label-dot-end: Blank node label must not end in dot OK
+turtle-syntax-bad-ln-dash-start: Local name must not begin with dash OK
+turtle-syntax-bad-ln-escape-start: Bad hex escape at start of local name OK
+turtle-syntax-bad-ln-escape: Bad hex escape in local name OK
+turtle-syntax-bad-missing-ns-dot-end: Prefix must not end in dot (error in triple, not prefix directive like turtle-syntax-bad-ns-dot-end) OK
+turtle-syntax-bad-missing-ns-dot-start: Prefix must not start with dot (error in triple, not prefix directive like turtle-syntax-bad-ns-dot-end) OK
+turtle-syntax-bad-ns-dot-end: Prefix must not end in dot OK
+turtle-syntax-bad-ns-dot-start: Prefix must not start with dot OK
+turtle-syntax-bad-number-dot-in-anon: Dot delimeter may not appear in anonymous nodes OK
+turtle-syntax-blank-label: Characters allowed in blank node labels OK
+turtle-syntax-ln-colons: Colons in pname local names OK
+turtle-syntax-ln-dots: Dots in pname local names OK
+turtle-syntax-ns-dots: Dots in namespace names OK
+IRI-resolution-01: IRI resolution (RFC3986 original cases) OK
+IRI-resolution-02: IRI resolution (RFC3986 using base IRI with trailing slash) OK
+IRI-resolution-07: IRI resolution (RFC3986 using base IRI with file path) OK
+IRI-resolution-08: IRI resolution (miscellaneous cases) OK
+* passed 298 out of 298 tests
+
