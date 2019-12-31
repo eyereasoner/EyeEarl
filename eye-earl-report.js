@@ -12,8 +12,7 @@ var N3Parser = require('n3').Parser,
 var parallel = false;
 
 // Path to the tests and the tests' manifest
-var testPath1 = "http://www.w3.org/2013/TurtleTests/",
-    testPath2 = "http://w3c.github.io/rdf-tests/turtle/",
+var testPath = "http://w3c.github.io/rdf-tests/turtle/",
     manifest = "manifest.ttl";
 
 // Prefixes
@@ -27,7 +26,7 @@ var prefixes = {
   earl: "http://www.w3.org/ns/earl#",
   foaf: "http://xmlns.com/foaf/0.1/",
   xsd: "http://www.w3.org/2001/XMLSchema#",
-  manifest: testPath2 + manifest + '#',
+  manifest: testPath + manifest + '#',
 };
 
 // List predicates
@@ -140,7 +139,7 @@ function fetch(testFile, callback) {
     if (exists)
       fs.readFile(localFile, 'utf8', callback);
     else
-      request.get(testPath2 + testFile,
+      request.get(testPath + testFile,
                   function (error, response, body) { callback(error, body); })
              .pipe(fs.createWriteStream(localFile));
   });
@@ -157,7 +156,7 @@ function fetch(testFile, callback) {
 
 // Performs the specified test by parsing the specified Turtle document
 function performTest(test, actionTurtle, callback) {
-  var documentURI = testPath1 + test.action,
+  var documentURI = testPath + test.action,
       resultFile = outputFolder + test.action.replace(/\.ttl$/, '.nt'),
       eye = spawn('eye', ['--nope', '--pass-turtle', '--turtle', documentURI,
                           '--wcache', documentURI, testFolder + test.action]),
@@ -364,9 +363,9 @@ function generateEarlReport(tests, callback) {
       writeln('manifest:', test.id, ' a earl:TestCriterion, earl:TestCase;');
       writeln('  dc:title ', escapeString(unString(test.name)), ';');
       writeln('  dc:description ', escapeString(unString(test.comment)), ';');
-      writeln('  mf:action <', testPath2, test.action, '>;');
+      writeln('  mf:action <', testPath, test.action, '>;');
       if (test.result)
-        writeln('  mf:result <', testPath2, test.result, '>;');
+        writeln('  mf:result <', testPath, test.result, '>;');
       writeln('  earl:assertions (');
       writeln('     [ a earl:Assertion;');
       writeln('       earl:assertedBy <', developer, '>;');
