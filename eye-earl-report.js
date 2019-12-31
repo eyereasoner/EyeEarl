@@ -321,7 +321,7 @@ var homepage = 'http://eulersharp.sourceforge.net/',
 
 function generateEarlReport(tests, callback) {
   // Create the report file
-  var reportFile = outputFolder + 'earl-report.ttl',
+  var reportFile = 'earl-report.ttl',
       report = fs.createWriteStream(reportFile),
       date = new Date().toISOString();
 
