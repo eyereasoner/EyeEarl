@@ -12,7 +12,7 @@ var N3Parser = require('n3').Parser,
 var parallel = false;
 
 // Path to the tests and the tests' manifest
-var testPath = "http://www.w3.org/2013/TurtleTests/",
+var testPath = "http://w3c.github.io/rdf-tests/turtle/",
     manifest = "manifest.ttl";
 
 // Prefixes
@@ -158,7 +158,7 @@ function fetch(testFile, callback) {
 function performTest(test, actionTurtle, callback) {
   var documentURI = testPath + test.action,
       resultFile = outputFolder + test.action.replace(/\.ttl$/, '.nt'),
-      eye = spawn('eye', ['--swipl', '--nope', '--pass', '--turtle', documentURI,
+      eye = spawn('eye', ['--nope', '--pass-turtle', '--turtle', documentURI,
                           '--wcache', documentURI, testFolder + test.action]),
       output = "",
       error = "";
@@ -227,8 +227,8 @@ function compareGraphs(actual, expected, callback) {
       callback(null, true);
     // If not, we check for proper graph equality with SWObjects
     else
-      exec('sparql -d ' + expected + ' --compare ' + actual, function (error, stdout, stderr) {
-        callback(error, /^matched\s*$/.test(stdout), stdout);
+      exec('rdfcompare ' + expected + ' ' + actual + ' N-TRIPLE N3', function (error, stdout, stderr) {
+        callback(error, /\sequal\s*$/.test(stdout), stdout);
       });
   });
 }
@@ -321,7 +321,7 @@ var homepage = 'http://eulersharp.sourceforge.net/',
 
 function generateEarlReport(tests, callback) {
   // Create the report file
-  var reportFile = outputFolder + 'earl-report.ttl',
+  var reportFile = './earl-report.ttl',
       report = fs.createWriteStream(reportFile),
       date = new Date().toISOString();
 
