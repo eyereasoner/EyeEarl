@@ -1,2 +1,2 @@
 #!/bin/bash
-node ~/github.com/josd/ttc/eye-earl-report.js 2>&1 | tee README
+node ~/github.com/josd/ttc/eye-earl-report.js
